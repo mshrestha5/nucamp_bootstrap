@@ -120,7 +120,64 @@
                 </div>
             </div>
         </div>
+
+        <div class="row row-content">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+
+                    <h3 class="card-header bg-info text-white card-title mb-0">Reserve a campsite</h3>
+
+                    <div class="card-body">
+                        <div class="form">
+
+                            <!-- //first row -->
+                            <div class="form-group row" id="reverseForm">
+                                <label for="numCampers" class="col-sm-6 col-12 col-form-label">Number of
+                                    Campers</label>
+                                <div class="col">
+                                    <select id="numCampers" name="numCampers" class="form-control">
+                                        <option disabled selected value="">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- //second row -->
+                            <div class="row form-group ">
+                                <label for="date" class="col-sm-6 col-12 col-form-label">Date</label>
+                                <div class="col">
+
+                                    <input type="date" id="date" name="date" class="form-control"
+                                        placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+
+                            <!-- Third row -->
+
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
+
+
 
     <footer class="site-footer">
         <div class="container">
