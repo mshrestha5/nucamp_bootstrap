@@ -34,14 +34,97 @@
                 </div>
                 <div class="col col-md-4 col-xl-2 mt-4 mt-md-0 align-self-center">
                     <div class="col col-md-4 col-xl-2 mt-4 mt-md-0 align-self-center">
-                        <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip"
+                        <!-- <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip"
                             data-placement="bottom" data-html="true" title="Or call us at &#10;1-206-555-1234"
-                            style="white-space: pre-line; font-weight: bold;">Reserve Campsite</a>
+                            style="white-space: pre-line; font-weight: bold;">Reserve Campsite</a> -->
+                        <button type="button" class="btn btn-lg btn-info" data-toggle="modal"
+                            data-target="#reserveModal">
+                            Reserve Campsite
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Modal -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info  text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numCampers" class="col-sm-6 col-12 col-form-label">Number of
+                                    Campers</label>
+                                <div class="col">
+                                    <select id="numCampers" name="numCampers" class="form-control">
+                                        <option disabled selected value="">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- //second row -->
+                            <div class="row form-group ">
+                                <label for="date" class="col-sm-6 col-12 col-form-label">Date</label>
+                                <div class="col">
+
+                                    <input type="date" id="date" name="date" class="form-control"
+                                        placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                            <!-- Third row -->
+
+                            <div class="row form-group">
+                                <label for="campsite type" class="col-sm-6 col-12 col-form-label"
+                                    name="siteType">Campsite
+                                    Type</label>
+                                <div class="col-2">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+
+                                            <input type="radio" name="siteType" id="siteTent" value="tent" checked> Tent
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="siteType" id="siteRV" value="RV"> RV
+                                        </label>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourth row -->
+
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal ends -->
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -124,8 +207,9 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="img/breadcrumb-trail.jpg"
-                                alt="Breadcrumb Trail Campground" />
+                                alt="Breadcrumb Trail Campground " />
                             <div class="carousel-caption">
+
                                 <h3>Breadcrumb Trail Campground</h3>
                                 <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path,
                                     hike-in-only campground.</p>
@@ -137,7 +221,7 @@
                             <div class="carousel-caption">
                                 <h3>React Lake Campground</h3>
                                 <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this
-                                    campground on the shored of the pristine React Lake is a favorite for fly fisheers
+                                    campground on the shores of the pristine React Lake is a favorite for fly fishers.
                                 </p>
                             </div>
                         </div>
@@ -146,10 +230,12 @@
                             <div class="carousel-caption">
                                 <h3>Chrome River Campground</h3>
                                 <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy
-                                    of old-growth firs at this enchanting spot by the Chrome River.
+                                    of old-growth firs at this enchanting spot by the Chrome River..
                                 </p>
                             </div>
                         </div>
+
+
                     </div>
                     <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
@@ -226,55 +312,19 @@
             </div>
         </div>
 
-        <div class="row row-content">
+        <!-- <div class="row row-content">
             <div class="col-sm-6 mx-auto">
                 <div class="card">
 
                     <h3 class="card-header bg-info text-white card-title mb-0">Reserve a campsite</h3>
 
                     <div class="card-body">
-                        <form id="reserveForm">
 
-                            <!-- //first row -->
-                            <div class="form-group row">
-                                <label for="numCampers" class="col-sm-6 col-12 col-form-label">Number of
-                                    Campers</label>
-                                <div class="col">
-                                    <select id="numCampers" name="numCampers" class="form-control">
-                                        <option disabled selected value="">Select...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- //second row -->
-                            <div class="row form-group ">
-                                <label for="date" class="col-sm-6 col-12 col-form-label">Date</label>
-                                <div class="col">
-
-                                    <input type="date" id="date" name="date" class="form-control"
-                                        placeholder="mm/dd/yyyy">
-                                </div>
-                            </div>
-
-
-                            <!-- Third row -->
-
-                            <div class="form-group row">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                </div>
-                            </div>
-                        </form>
+                     
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
