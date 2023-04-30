@@ -383,7 +383,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-        $(function () {
+        $(document).ready(function () {
             $(".carousel").carousel({ interval: 2000 });
             $("#carouselButton").click(function () {
                 if ($("#carouselButton").children("i").hasClass("fa-pause")) {
